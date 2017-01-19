@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mitochondria Fission/Fusion Detection - Angeline Aguinaldo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+			<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="aboutme.html">About Me</a></li>
+										<li>
+											<span class="opener"><a href="projects.html">Projects</a></span>
+										<li><a href="projects.html">Projects</a></li>
+										</li>
+										<li><a href="publications.html">Publications</a></li>
+										<li><a href="https://angelineaguinaldo.wordpress.com/">Blog</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+<!-- 								<section>
+									<header class="major">
+										<h2>Recent Updates</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section> -->
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Feel free to contact me if you have any questions or are looking to collaborate. I'm always checking my e-mail so I will be sure to get you a prompt reply. Looking forward to hearing from you!</p>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="mailto:angeline.m.aguinaldo@gmail.com">angeline.m.aguinaldo@gmail.com</a></li>
+										<li class="fa-phone">Upon request</li>
+										<li class="fa-home">Upon request</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Angeline Aguinaldo. All rights reserved.</p>
+								</footer>
+
+						</div>
+					</div>
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong> &#10048; Hi, I'm Angeline!</strong></a>
+								</header>
+
+							<!-- Content -->
+								<section>
+
+									<ul class="actions vertical">
+										<li><a href="projects.html" class="button">Back to Projects</a></li>
+									</ul>
+								
+									<header class="main">
+										<h1>Mitochondria Fission/Fusion Image Analysis Technique</h1>
+									</header>
+
+									<center><video width="1100" height="825" controls>
+									  <source src="videos/Mitochondria Fission Fusion.mp4" type="video/mp4">
+									  Your browser does not support the video tag.
+									</video></center>
+									<p></p>
+									<p>Mitochondrial organelles of cells with varying oleic acid concentrations have been captured in fluorescence microscopy images. The varying levels of oleic acid are expected to influence how these mitochondria function<sup>[2]</sup>.</p>
+									<p>To understand the effects of various levels of oleic acid on the cell, the fission and fusion behavior of the mitochondria were observed. This was done by calculating the number of necks in each frame of a mouse cell-line image sequence.</p> 
+									<p>Based on these observations, it was found that the fusion behavior of mitochondria is affected by the levels of oleic acid present in the mitochondria. Mitochondria exposed to high levels of oleic acid showed slower fusion rates than that of the wild-type mitochondria. Mitochondria starved of oleic acid showed faster fusion rates than that of the mitochondria.</p>
+
+									<h2>Background</h2>
+									It has been found that mitochondrial fission and fusion behavior is indicative of mitochondria related cell death and maintenance of mitochondria DNA integrity<sup>[1], [5]</sup>. Therefore, the objective of this project was to observe the rate of fusion and fission of mitochondria organelles when exposed to various levels of oleic acid.</p>
+									<p><span class="image right"><img src="images/Mitochondria Fission Fusion/pic01.png" alt="" /></span>
+									<p>This technique was applied to mouse cell-line microscopy images from the National Institute of Health. A sample image can seen in the figure to the right. The cells in each oleic acid category were exposed to a specific level of oleic acid prior to the imaging. The oleic acid levels varied between three categories: high oleic acid, normal oleic acid, and no oleic acid. These cells were then imaged a frame per minute for 25 minutes. 42 unique cells were imaged after a specific oleic acid level exposure. </p>
+
+									<h2>Methods</h2>
+
+									<p><span class="image left"><img src="images/Mitochondria Fission Fusion/pic02.png" alt="" /></span>The parameter used to define fission and fusion was the necks that formed during the separation and union of the mitochondria. A neck is defined as the narrowest region between two large adjacent regions. The neck is circled in red on the figure to the left.</p>
+									<h3>Segmentation</h3>
+									<p>To segment the mitochondria, a filtering algorithm was used to extract the foreground from the background of the original image found in <b>(a)</b> in the figure below. In the provided dataset, the mitochondria channel was located on channel 4. This channel was extracted and a contrast filter was applied<sup>[4]</sup>. The contrast filter consisted of an iterative Gaussian low pass filter on the image data for 25 iterations as shown in <b>(b)</b>.The contrast was adjusted as seen in <b>c</b><sup>[3]</sup>. Following this, an Otsu threshold was determined and used to segregate the RGB image and convert it to a binary image as seen in <b>(d)</b>. The small objects of pixel size less than 25 were removed, <b>(e)</b>, to reduce noise. The image was then skeletonized to minimize incorrect connectivity between objects that may have been caused by halos. This can be found in <b>(f)</b>.</p>
+
+									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic03.png" alt="" /></span></p></center>
+									<center><h5>The segmentation algorithm used in the provided data set</h5></center>
+
+									<p>After the image was filtered, the boundaries on the binary image were located and locations of the boundary pixels were stored. Lines were then plotted on top of the figure at the boundary pixel locations. The colors of the plots were determined by the index of the filename found in the given file directory. The various mitochondria outlines can be found in the figure below.</p>
+
+									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic04.png" alt="" /></span></p></center>
+									<center><h5>Segmented mitochondria. All images have a pixel resolution of 0.085&mu;m/pixel</h5></center>
+
+									<h3>Counting Necks</h3>
+									<p>To count the necks, first each component was identified, and the boundary pixel locations were collected. The Euclidean distance between each pair of pixels was calculated. A 5x5 Gaussian filter was applied to the pair distance matrix to reduce noise. The minimum pixel pair distance within an individual object was determined. The number of pairs that matched that minimum pair distance determined the number of necks in that object. This was repeated and summed for each object. The code can be found below.</p>
+									<p>To count the necks, first each component was identified, and the boundary pixel locations were collected. The Euclidean distance between each pair of pixels was calculated. A 5x5 Gaussian filter was applied to the pair distance matrix to reduce noise. The minimum pixel pair distance within an individual object was determined. The number of pairs that matched that minimum pair distance determined the number of necks in that object. This was repeated and summed for each object. The code can be found in Appendix A.</p>
+									<p>This was inspired by a technique used by Westrate et al the 2014 publication found in the Public Library of Science<sup>[6]</sup>.</p>
+
+									<pre><code>function [totalnecks, neckLoc] = neckCount(B)
+ 
+% B is a structure that stores the boundary pixel locations for each object.
+
+totalnecks = 0;
+neckLoc = [];
+ 
+    for j = 1:numel(B)
+        perim = [B{j}];
+        pairdist = pdist(perim,'euclidean');
+        
+        kernel = [5 5]; % get size of image
+        sigma = 0.5; % define standard deviation of gaussian distribution
+        h = fspecial('gaussian',kernel, sigma); % create gaussian LP filt
+        filterPerim = imfilter(pairdist,h,'symmetric');
+        
+        localmin = min(filterPerim,[],2);
+        A = find(filterPerim == localmin);
+        
+        neck = numel(A);
+        totalnecks = totalnecks + neck; % total branch regions
+    end
+end
+</code></pre>
+									<center><h5>MATLAB code used to count the number of mitochondria fission and fusion necks</h5></center>
+
+									<h3>Counting Objects</h3>
+									<p>The number of objects were counted using MATLAB function bwlabel. This counted the number of separate objects found in each frame for each image sequence.</p>
+
+									<h2>Results</h2>
+									<p>Based on the colored segmentations found in the figure aforementioned, the red and magenta are for cells exposed to high oleic acid levels. The green and yellow cells were not exposed to any abnormal levels of oleic acid. The blue and cyan cells were starved of oleic acid.</p>
+									<p>The figure below shows a sample plot that corresponds to the number of necks found in one image sequence after 25 frames. The oscillatory behavior found in the plots is still under investigation. It may be attributed to the cycle of fission and fusion that occurs in an attempt to mix mitochondria contents<sup>[1]</sup>. Additionally, this could be the cause of noise because of the microscopy technique.</p>
+
+									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic05.png" alt="" /></span></p></center>
+									<center><h5>Sample plot describing the number of necks in each frame for a given time sequence. The cell in this example was starved of oleic acid</h5></center>
+
+									<p>These parameters were averaged for each oleic acid level at every time point. These results show the number of necks increasing over time and the number of objects decreasing over time, as seen in the figures below. The rate of growth of each parameter increases as the oleic acid level decreases. The table below display the linear regression fit and R-squared values. It can be argued that the data does not fit a linear regression.</p>
+
+									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic06.png" alt="" /></span></p></center>
+									<center><h5>Plot of average number of objects found at each time point for each level of oleic acid. The circle markers indicate a new frame. The number of mitochondria decreases over time for all levels of oleic acid.</h5></center>
+
+									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic07.png" alt="" /></span></p></center>
+
+									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic08.png" alt="" /></span></p></center>
+									<center><h5>Plot of average number of objects found at each time point for each level of oleic acid. The circle markers indicate a new frame. The number of mitochondria decreases over time for all levels of oleic acid.</h5></center>
+
+									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic09.png" alt="" /></span></p></center>
+
+									<h2>Conclusions and Discussion</h2>
+									<p>In addition to the number of necks, the number of objects in each frame was collected. Based on the neck and object relationship, it can be inferred that fusion is occurring. It can be said that the rate of fusion decreases as the oleic acid level increases.</p>
+									<p>Ultimately, this implies that mitochondria exposed to high oleic acid levels have a slower rate of fusion than that of wild type mitochondria. And the mitochondria starved of oleic acid experience have a faster rate of fusion that that of wild type mitochondria.</p>
+									<p>A potential explanation for this could be that the starved mitochondria fuse together faster than the wild type in an attempt to complement and re-encode their damaged DNA and the mitochondria with high oleic acid do not need to re-encode their DNA as quickly because they do not damage as quickly.</p>
+
+									<h2>Future Work</h2>
+									<p>Several items related to this project are still under investigation. The intent is to complete validation studies on the accuracy of the neck count being reported. This can be will be done by circling the necks being detected by the algorithm and noting the correctness. Statistical studies will also be done to compare the sample observations to the total population. Additionally, the algorithm will be modified to adaptively crop the image to the region of interest.</p>
+
+									<h2>Project Details</h2>
+									<p>This project was completed within a ten week graduate-level course entitled, Cell Tissue Image Analysis.</p>
+									<ul>
+									<li><strong>Advisors:</strong> Dr. Andrew Cohen, Eric Wait</li>
+									<li><strong>Last updated:</strong> March 17, 2015</li>
+									</ul>
+
+									<ul class="actions small">
+										<li><a href="files/Mitochondria Fission Fusion Slide Deck.pdf" class="button special">Slide Deck</a></li>
+										<li><a href="https://github.com/angeline-aguinaldo/MitochondriaFissionFusionDetection" class="button special">Git</a></li>
+									</ul>
+
+
+									<h2>References</h2>
+									<ol>
+										<li>Chen, H., and D. C. Chan. "Mitochondrial Dynamics-fusion, Fission, Movement, and Mitophagy-in Neurodegenerative Diseases." Human Molecular Genetics 18.R2 (2009): R169-176. Web.</li>
+										<li>Duval, Carine, Nathalie Augé, Marie-Françoise Frisach, Louis Casteilla, Robert Salvayre, and Anne Nègre-Salvayre. "Mitochondrial Oxidative Stress Is Modulated by Oleic Acid via an Epidermal Growth Factor Receptor-dependent Activation of Glutathione Peroxidase." Biochemical Journal 367.3 (2002): 889. Web.
+										</li>
+										<li>Michel, R., Steinmeyer, R., Falk, M. and Harms, G. S. (2007), A new detection algorithm for image analysis of single, fluorescence-labeled proteins in living cells. Microsc. Res. Tech., 70: 763–770. doi: 10.1002/jemt.20485
+										</li>
+										<li>Mitra, Kasturi, and Jennifer Lippincott-Schwartz. “Analysis of Mitochondrial Dynamics and Functions Using Imaging Approaches.” Current protocols in cell biology / editorial board, Juan S. Bonifacino ... [et al.] CHAPTER (2010): Unit–4.2521. PMC. Web. 17 Mar. 2015.</li>
+										<li>Westrate LM, Drocco JA, Martin KR, Hlavacek WS, MacKeigan JP (2014) Mitochondrial Morphological Features Are Associated with Fission and Fusion Events. PLoS ONE 9(4): e95265. doi: 10.1371/journal.pone.0095265</li>
+									</ol>
+								</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

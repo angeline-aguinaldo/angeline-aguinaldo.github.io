@@ -1,0 +1,389 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>A review of Generalized Bedford's Law- Angeline Aguinaldo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+			<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="aboutme.html">About Me</a></li>
+										<li><a href="projects.html">Projects</a></li>
+										<li><a href="publications.html">Publications</a></li>
+										<li><a href="https://angelineaguinaldo.wordpress.com/">Blog</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+<!-- 								<section>
+									<header class="major">
+										<h2>Recent Updates</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section> -->
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Feel free to contact me if you have any questions or are looking to collaborate. I'm always checking my e-mail so I will be sure to get you a prompt reply. Looking forward to hearing from you!</p>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="mailto:angeline.m.aguinaldo@gmail.com">angeline.m.aguinaldo@gmail.com</a></li>
+										<li class="fa-phone">Upon request</li>
+										<li class="fa-home">Upon request</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Angeline Aguinaldo. All rights reserved.</p>
+								</footer>
+
+						</div>
+					</div>
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong> &#10048; Hi, I'm Angeline!</strong></a>
+								</header>
+
+							<!-- Content -->
+								<section>
+
+									<ul class="actions vertical">
+										<li><a href="projects.html" class="button">Back to Projects</a></li>
+									</ul>
+																
+									<header class="main">
+										<h1>A Review of Generalized Benford's Law for JPEG Coefficents</h1>
+									</header>
+
+									<center><span class="image"><img src="images/Generalized Benford's Law/DCT coeff histogram.png" alt="" height="400" weight="533"/></span></center>
+
+									<p>For any uncompressed image, the distribution of the first digit of the block-DCT coefficients before quantization follows a logarithmic PMF called Benford’s law. Moreover, if we apply JPEG compression once to an image, the first digit of the quantized JPEG coefficients follows a Benford-like logarithmic law (otherwise known as Generalized Benford’s law). This Generalized Benford’s law is one of the main results of this paper. In addition, if we apply JPEG compression to an image that has already been JPEG compressed, this distribution varies in a very sensitive way: the Generalized Benford’s law will be violated after double JPEG compression. This has applications in detection of JPEG compression in bitmap images, in the estimation of the JPEG Q-factor for single-compressed image, and in the detection of double JPEG compression.</p>
+
+									<p><i>Note on the images</i>
+
+									<p>For the original paper, the Uncompressed Image Database version 2 is used (hereafter, UCID). UCID is a publicly available uncompressed image database which consists of 1,338 uncompressed color images in tiff form. For simplicity, the luminance component of the images was extracted, therefore 8-bit gray level images will be used without loss of generality.</p>
+
+									<h2>Benford's Law</h2>
+									<p>Benford’s law is an empirical law about the frequency distribution of the first digit of many sets of naturally generated numbers. The Probability Mass Function of the random variable X (first digit of a number) follows a decreasing logarithmic law:</p>
+
+									<p><center><span class="image"><img src="images/Generalized Benford's Law/BenfordEq01.png" alt=""/></center></span></p>
+
+									<p>A representation of the histogram distribution of Benford’s law can be seen below.</p>
+
+									<p><center><span class="image"><img src="images/Generalized Benford's Law/Benford01.png" alt=""/></center></span>
+									<h5><center>Distribution of Benford's Law of First Digits</center></h5>	
+
+									<p>A good video explanation for Benford's Law of First Digits can be found <a href="https://www.youtube.com/watch?v=XXjlR2OK1kM">here</a>.</p>
+
+									<h2>Benford's Law in Block-DCT Coefficients</h2>
+
+									<p><span class="image left"><img src="images/Generalized Benford's Law/Benford02.png" alt="" /></span>The probability distribution of the first digits of the block-DCT coefficients before quantization of an uncompressed image (hereafter, “block-DCT coefficients”) follows Benford’s law. </p>
+
+									<p><span class="image right"><img src="images/Generalized Benford's Law/Benford03.png" alt="" /></span>In the figures shown here, the comparison between the Benford’s law prediction and the actual distribution for the first digit of the block-DCT coefficients of all images in the UCID database can be seen. Each bar represents an average of the probability of that digit for all the images in the UCID database. The error bars at the top of the yellow bars indicate the standard deviations of the distributions for these images.</p>
+
+									<p>The quality of the fitting of the actual distribution to Benford’s law can be measured with the χ2 divergence:</p>
+
+									<p><center><span class="image"><img src="images/Generalized Benford's Law/BenfordEq02.png" alt="" /></span></center></p>
+
+									<p>where p_i is the probability value predicted by Benford’s law, and  p ̂_i is the experimental results from the first digit histogram. The average of χ2 divergence for the fitting of all the UCID images is 0.0034, which indicates good fitting results.</p>
+
+									<h2>Generalized Benford's law in JPEG Coefficients</h2>
+									<p>The PMF of the first digit of the JPEG quantized block-DCT coefficients (hereafter, the JPEG coefficients) is observed to not follow the Benford’s law. However, it can be seen through visual inspection that the JPEG coefficients still follow a logarithmic distribution. This prompted Fu et al. to describe the distribution of JPEG coefficients using a parametric version of Benford’s law. Therefore, the PMF of the first digit follows the generalized Benford’s law, a parametric logarithmic function presented in this paper.</p>
+
+									<p><center><span class="image"><img src="images/Generalized Benford's Law/BenfordEq03.png" alt="" /></span></center></p>
+
+									<p>In the generalized Benford’s law equation, s and q are model parameters that depend on the JPEG quality factor and other characteristics of the image and N is a normalization factor to make the total probability equal to one. It is noteworthy to mention that the natural expression of Benford’s law can be seen when s = 0 and q = 1 are substituted into the generalized Benford’s law. This indicates that Benford’s law is a special case of the generalized Benford’s law.</p>
+									<p>The parameters N, q, and s are dependent on the following conditions:</p>
+
+									<ul>
+									<li>The dataset of images: we choose the images result of JPEG compressing the UCID images.</li>
+									<li>2.	The Q-factors of the JPEG compression: In our case, 100, 90, 80, 70, 60 and 50.</li>
+									</ul>
+
+									<p>Fu et. al. estimated the parameters N, s, and q for Q-factors as shown in the table below. They do not describe their methodology but we believe it is through some optimization technique that we did not have time to investigate or reproduce. Throughout our verfication we use their parameters at the respective Q-factors.</p>
+
+									<h5><center>Goodness-of-fit results for given model parameters (<i>N</i>, <i>q</i>, <i>s</i>) from the Fu et. al. publication</center></h5>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th><center>Q-factor</center></th>
+													<th><i><center>N</center></i></th>
+													<th><i><center>i</center></i></th>
+													<th><i><center>s</center></i></th>
+													<th><center>Goodness-of-fit (SSE)</center></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><center>100</center></td>
+													<td><center>1.456</center></td>
+													<td><center>1.47</center></td>
+													<td><center>0.0372</center></td>
+													<td><center>7.104e-06</center></td>
+												</tr>
+												<tr>
+													<td><center>90</center></td>
+													<td><center>1.255</center></td>
+													<td><center>1.563</center></td>
+													<td><center>-0.3784</center></td>
+													<td><center>5.255e-07</center></td>
+												</tr>
+												<tr>
+													<td><center>80</center></td>
+													<td><center>1.324</center></td>
+													<td><center>1.653</center></td>
+													<td>-<center>0.3739</center></td>
+													<td><center>3.068e-06</center></td>
+												</tr>
+												<tr>
+													<td><center>70</center></td>
+													<td><center>1.412</center></td>
+													<td><center>1.732</center></td>
+													<td><center>-0.337</center></td>
+													<td><center>5.362e-06</center></td>				
+												</tr>
+												<tr>
+													<td><center>60</center></td>
+													<td><center>1.501</center></td>
+													<td><center>1.813</center></td>
+													<td><center>-0.3025</center></td>
+													<td><center>6.112e-06</center></td>
+												</tr>
+												<tr>
+													<td><center>50</center></td>
+													<td><center>1.579</center></td>
+													<td><center>1.882</center></td>
+													<td><center>-0.2725</center></td>
+													<td><center>6.0544e-06</center></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<p>To demonstrate the effectiveness of their generalized Benford’s law model, Fu et al. computed the JPEG coefficients of all the images in the images in from UCID and compared the results to their model. The goodness-of-fit statistic indicate a good fit provided the parameters N, q, and s. We reproduced their results by compressing all the images in UCID with the Q-factors in Table 1 and computing the first digit distribution of the JPEG coefficients. The figure below shows our results in comparison to Fu et al. </p>
+
+									<p><center><span class="image"><img src="images/Generalized Benford's Law/Benford04.png" alt=""/></center></span>
+									<h5><center>Generalized Benford's law plot results from Fu et. al. publication</center></h5>
+
+									<p><center><span class="image"><img src="images/Generalized Benford's Law/Benford05.png" alt=""/></center></span>
+									<h5><center>Generalized Benford's law plot results from our validation test</center></h5>
+
+									<p>It can be seen that smaller Q-factors force the generalized Benford’s law to deviate farther from the natural Benford’s law. This approaches a straight line in the log-log space.</p>
+
+									<h2>Generalized Benford's Law in Double JPEG Compression</h2>
+
+									<p>When an image is double-JPEG compressed, the first digit of the JPEG coefficients does not follow the generalized Benford’s law. Double JPEG compression artifacts are present when observing the first digit distribution. These artifacts depend on both Q factors of the first and second JPEG compressions</p>
+
+									<h2>Application in Image Forensics: Detection of JPEG Compression in Bitmap Images</h2>
+
+									<p>Image investigators are often prompted to identify whether a bitmap image has been JPEG compressed. When analyzing a bitmap image, there is no metadata information provided as in images saved in JPEG format. Fan &amp; de Queiroz demonstrated that JPEG compression leaves blocking artifacts as fingerprints. The detection scheme proposed works well except for higher quality factors (Q-factor > 90). It is now known that the first digit distribution should follow the Benford’s law if the image has not been JPEG compressed. Therefore, the JPEG compression fingerprints that can be seen when observing the first digit distribution of JPEG coefficients can be exploited.</p>
+
+									<p>When assessing whether a bitmap image has been JPEG compressed, the following decision rules can be applied:</p>
+
+									<ul>
+									<li>If it has not been JPEG compressed, the distribution of the first digit of the JPEG coefficients of the image will follow the Generalized Benford’s law.</li>
+									<li>•	If it has already been JPEG compressed, the distribution of the first digit of the JPEG coefficients will deviate from the Generalized Benford’s law.</li>
+									</ul>
+
+									<p>The test image dataset utilized was the open source uncompressed image database (UCID). The images were compressed using MATLAB function imwrite with the following quality factors: 99, 95, 90, 80, 70, and 60. The images were then uncompressed and stored in bitmap format. Using a standard quantization table, the images were JPEG compressed with quality factor of 100. The grid origin of DCT transformation was assumed to be 8x8.</p>
+
+									<p>To distinguish between an image that was originally uncompressed and an image that was originally JPEG compressed, the following approaches can be used to classify:</p>
+
+									<ul>
+									<li>Visual inspection of the histogram of the first digits of the JPEG coefficients</li>
+									<li>Machine-learning algorithm (e.g. support vector machine)</li>
+									<li>c.	Goodness-of-fitting with respect to the Generalized Benford’s law model</li>
+									</ul>
+
+									<p>Fu et al use a Support Vector Machine algorithm where a logarithmic function of the first digits of the JPEG coefficients is used a features. Time did not permit us to reproduce their work with an SVM. However, we reproduced their work to demonstrate that the JPEG coefficients of a previously single-compressed image does not follow a logarithmic function and used sum of squared errors (SSE) for the goodness-of-fitting test to classifier an image as uncompressed or compressed. Some visual plots from our validation are shown below. The charts compare the first digit distribution of JPEG coefficients for an uncompressed image to that of a previously compressed image at the noted Q-factors. The JPEG compression artifacts can clearly be visually detected.</p>
+
+									<p><center><span class="image"><img src="images/Generalized Benford's Law/Benford06.png" alt=""/></center></span>
+									<h5><center> First digit distribution of JPEG coefficients of JPEG compressed images (QF=99)</center></h5>
+
+									<p><center><span class="image"><img src="images/Generalized Benford's Law/Benford07.png" alt=""/></center></span>
+									<h5><center> First digit distribution of JPEG coefficients of JPEG compressed images (QF=90)</center></h5>
+
+									<p><center><span class="image"><img src="images/Generalized Benford's Law/Benford08.png" alt=""/></center></span>
+									<h5><center> First digit distribution of JPEG coefficients of JPEG compressed images (QF=70)</center></h5>
+
+									<p>Note that as the difference between the difference between original JPEG Q-factor and the Q-factor used by the detector, the resulting distribution produces a larger error relative to the Benford’s law. This artifact can be exploited for JPEG steganalysis.</p>
+
+									<p>The resulting receiver operating characteristic (ROC) curve of the JPEG detector can be seen in Figure 5. It can be seen that detection accuracy is 100% with a 0% false positive rate. This is comparable to the results obtained by Fu et. al. in Table 2.</p>
+
+									<p><center><span class="image"><img src="images/Generalized Benford's Law/Benford09.png" alt=""/></center></span>
+									<h5><center>ROC curve of JPEG detection binary classifier</center></h5>
+
+									<h2>Application in Image Forensics: Estimation of Q-factor for JPEG compressed bitmap image</h2>
+
+									<p>Because the metadata regarding the JPEG compression is not provided with a bitmap image, the quality factor and quantization used cannot be extracted. To estimate the quality factor of the JPEG compression, the image under investigation is compressed with different Q-factors resulting in several versions of the original image with various quality factor compressions. The histogram of the first digits of the resulting JPEG coefficients is computed. The following decision rules can be applied: </p>
+
+									<ul>
+									<li>If the image is recompressed with the same Q-Factor as the first compression, the first digits of the resulting image’s JPEG coefficients will follow the Generalized Benford’s law.</li>
+									<li>If the image was recompressed with a different Q-Factor from the one used in the first JPEG compression, the first digits of the resulting image’s JPEG coefficients will violate the Generalized Benford’s law.</li>
+									</ul>
+
+									<p>Therefore, the JPEG compression quality factor can be said to be the quality factor that minimized the SSE when compared with the Generalized Benford’s law. This can be done by visual inspection or using a goodness-of-fit method.</p>
+
+
+									<h5><center>Results of Q-factor estimation generated by Fu et. al.</center></h5>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th><center>Q-factor</center></th>
+													<th><i><center>N</center></i></th>
+													<th><i><center>i</center></i></th>
+													<th><i><center>s</center></i></th>
+													<th><center>Goodness-of-fit (SSE)</center></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><center>85</center></td>
+													<td><center>0.1966</center></td>
+													<td><center>0.475</center></td>
+													<td><center>-0.9982</center></td>
+													<td><center>0.0082</center></td>
+												</tr>
+												<tr>
+													<td><center>83</center></td>
+													<td><center>0.4738</center></td>
+													<td><center>0.9793</center></td>
+													<td><center>-0.9262</center></td>
+													<td><center>0.00072</center></td>
+												</tr>
+												<tr>
+													<td><center>80</center></td>
+													<td><center>1.227</center></td>
+													<td><center>1.571</center></td>
+													<td>-<center>-0.4212</center></td>
+													<td><center>7.7562e-06</center></td>
+												</tr>
+												<tr>
+													<td><center>77</center></td>
+													<td><center>1.569</center></td>
+													<td><center>1.719</center></td>
+													<td><center>-0.144</center></td>
+													<td><center>0.00016</center></td>				
+												</tr>
+												<tr>
+													<td><center>75</center></td>
+													<td><center>3.537</center></td>
+													<td><center>2.388</center></td>
+													<td><center>1.41</center></td>
+													<td><center>0.00333</center></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<p>Based on the results generated by Fu et al. using a goodness-of-fit method as shown above, it can be seen that the error is significantly lower for the quality factor that matches the quality factor used for first JPEG compression (Q-factor = 80).</p>
+
+									<p>In our validation test, we employ a non-machine learning algorithm as follows:</p>
+
+									<ol>
+									<li>We compress a random image from the UCID database with a particular know Q-factor and resave the image as bitmap.</li>
+									<li>We perform JPEG quantization of the bitmap image with various Q-factors and compute the first digit distribution.</li>
+									<li>We find the line of best fit for the JPEG coefficient distribution and calculated the Least Square Error between the distribution and the line of best fit.</li>
+									<li>The quantization factor that produces a least square error below a certain threshold is regarded as an estimate of the original Q-factor. </li>
+									</ol>
+
+									<p>The figure below shows a typical plot of our verification where the Q-factor is estimated to be 60. It can be seen that when the image was quantized with a quality factor of 60 after being initially compressed with the same quality factor, the line follows the generalized Benford’s law while the other quality factors show significant artifacts of deviation.</p>
+
+									<p><center><span class="image"><img src="images/Generalized Benford's Law/Benford10.png" alt=""/></center></span>
+									<h5><center>Validation results of Q-factor estimation</center></h5>
+
+									<p>A notable observation is found when an image is recompressed with an integer multiple of the original quality factor. In this case, the error will remain small as if to indicate that the image had been compressed with the integer multiple as opposed to the original quality factor. In order to account for this, Fu et al. suggests that algorithm should recompress the image starting at a quality factor of 100 and then with gradually smaller quality factors. The highest quality factor with a distortion below a threshold is the quality factor estimate.</p>
+
+									<h2>Application in Image Forensics: Detection of JPEG Double-Compression</h2>
+
+									<p>JPEG double-compression is an important issue in image steganalysis and forgery detection. The most common methods for detection of JPEG double-compression are based on pixel intensity histogram artifacts introduced by the second JPEG compression. As explained in Section 3, there are significant deviations from Generalized Benford’s Law for the distribution of the first digits of JPEG coefficients of a double JPEG compressed image.  Our validation shows results of the double JPEG compression detection in the figure below.</p>
+
+									<p><center><span class="image"><img src="images/Generalized Benford's Law/Benford11.png" alt=""/></center></span>
+									<h5><center>Validation results for double JPEG compression first digit distribution of JPEG coefficients</center></h5>
+
+									<p>It can be seen in the result generated that the generalized Benford’s law model has been violated by double JPEG compression for different quality factors. Fu et al. did not discussed results of a classifier for double JPEG compression. We believe a simple non-machine detector like we used in the previous section can detect the double-compressed image.</p>
+
+									<h2>Conclusions</h2>
+
+									<p>The novel statistical model for the distribution of the first digits of the block-DCT and quantized JPEG coefficients has been proposed by Fu et. al. in their 2007 publication. It is the first time in literature that the distribution of the first digits of the block-DCT coefficients and JPEG coefficients has been explored for image analysis. The extensive experiments have shown the effectiveness of the proposed model. Some image forensic applications of the proposed model have been discussed. Based on the experimental validation conducted, the claims and results hold true for the Fu et. al. findings. The method can be used to accurately detect and estimate single JPEG compression and its Q-factor as well as detection of double JPEG compression. One weakness of their model is that it cannot detect a double-compression that uses the same Q-factor for both compression. The left open the estimation of JPEG compression history and Q-factor estimation for double-compressed image and so it is not known whether Benford’s Law could be applied in such case.</p>
+
+									<h2>Project Details</h2>
+									<p>This project was completed for a graduate-level course, Media Forensics and Security, at Drexel University.</p>
+									<ul>
+									<li><strong>Team members:</strong> <u>Angeline Aguinaldo</u>, Inaki Crespo, and William Osei-Bonsu</li>
+									<li><strong>Advisor:</strong> Dr. Matthew Stamm</li>
+									<li><strong>Last updated:</strong> March 17, 2016</li>
+									</ul>
+
+									<ul class="actions small">
+										<li><a href="files/Generalized Benford's Law for JPEG Coefficients Slide Deck.pdf" class="button special">Slide Deck</a></li>
+									</ul>
+
+									<h2>References</h2>
+									<ol>
+									<li>Dongdong Fu, Yun Q. Shi, Wei Su. A generalized Benford's law for JPEG coefficients and its applications in image forensics. Proceedings of SPIE. 2007. No: <a href="https://www.researchgate.net/publication/242075449_A_generalized_Benford's_law_for_JPEG_coefficients_and_its_applications_in_image_forensics_-_art_no_65051L">65061L</a></li>
+									<li>Dijana Tralic, Juraj Petrovic, Sonja Grgic. JPEG image tampering detection using blocking artifacts. Systems, Signals and Image Processing (IWSSIP). 2012. No: <a href="http://ieeexplore.ieee.org/document/6208313/?reload=true">12770675</a></li>
+									</ol>
+								</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

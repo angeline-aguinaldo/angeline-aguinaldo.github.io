@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mitochondria Dynamics in Cancer - Angeline Aguinaldo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+			<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="aboutme.html">About Me</a></li>
+										<li><a href="projects.html">Projects</a></li>
+										<li><a href="publications.html">Publications</a></li>
+										<li><a href="https://angelineaguinaldo.wordpress.com/">Blog</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+<!-- 								<section>
+									<header class="major">
+										<h2>Recent Updates</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section> -->
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Feel free to contact me if you have any questions or are looking to collaborate. I'm always checking my e-mail so I will be sure to get you a prompt reply. Looking forward to hearing from you!</p>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="mailto:angeline.m.aguinaldo@gmail.com">angeline.m.aguinaldo@gmail.com</a></li>
+										<li class="fa-phone">Upon request</li>
+										<li class="fa-home">Upon request</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Angeline Aguinaldo. All rights reserved.</p>
+								</footer>
+
+						</div>
+					</div>
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong> &#10048; Hi, I'm Angeline!</strong></a>
+								</header>
+
+							<!-- Content -->
+								<section>
+
+									<ul class="actions vertical">
+										<li><a href="projects.html" class="button">Back to Projects</a></li>
+									</ul>
+								
+									<header class="main">
+										<h1>Mitochondria Dynamics in Aggressive Cancer Cells</h1>
+									</header>
+
+									<center><video width="1100" height="825" controls>
+									  <source src="videos/Mitochondria montage.mp4" type="video/mp4">
+									  Your browser does not support the video tag.
+									</video></center>
+									<p></p>
+									<p>Mitochondria are vital organelles needed to perform a myriad of cellular functions. These ‘powerhouses of the cell’ are found in both healthy and tumor cells alike. However, the role of mitochondria in the metastasis of a tumor cell is not well understood. New information has been found by Cecilia Caino and Dr. Dario Altieri at the Wistar Institute and his team <sup>[1], [2]</sup>. They have discovered a unique dependency of high invasive tumor cells on adaptive mitochondria dynamics.</p>
+									<p> Caino et al. were interested in conducting follow-up studies to understand how spatiotemporal variations in the mitochondrial network impact the invasiveness of prostate cancer cells.  These studies involve the development of computational image analysis to quantify mitochondrial dynamics. It turns out that mitochondria shape changes, subcellular localization, and organelle trafficking vary in highly invasive versus low invasive tumor cells. The live prostate cells used for this analysis were labeled with red fluorescent protein (RFP) and imaged using a confocal microscope for 16 minutes with images acquired every 9.5 seconds.</p>
+									<center><video width="600" height="600" controls>
+									  <source src="videos/RawMovieSample.mp4" type="video/mp4">
+									  Your browser does not support the video tag.
+									</video></center>
+									<p></p>
+									<p>An image analysis program was designed to quantify the number of fission and fusion events found in each movie. In each frame, the mitochondria were computationally segmented and tracked. Fission and fusion events were defined as the disappearance or genesis of a new track that fall within a minimum Euclidean distance from another mitochondria track in the post or previous frame. It was found that highly invasive cells exhibited more fission and fusion than low invasive cells.</p>
+									<p>Additional interrogation of the spatiotemporal distribution and median velocity of the mitochondria found that the highly invasive tumor cells contained mitochondria closer to the cell boundary and traveled at faster rates. This work is currently published in Nature Communications<sup>[3]</sup>.</p>
+
+									<h2>Project Details</h2>
+									<p>This project was completed over the course of 16 months (September 2015 - December 2016). In this project, I was responsible for programming the image analysis software used (in MATLAB and MEX C/C++). The following software features were included: </p>
+									<ul>
+									<li>Segmentation and tracking of mitochondria;</li>
+									<li>Quantification of fission and fusion events; </li>
+									<li>Calculation of mitochondria migration velocity; </li>
+									<li>Calculation of spatiotemporal distribution of the mitochondria; and</li>
+									<li>Automatic output of plots, movies, and annotated images.</li>
+									</ul>
+									<p></p>
+									<strong>Publication Release Date:</strong> December 19, 2016</li>
+									<p></p>
+
+									<h2>References</h2>
+									<ol>
+									<li>Caino, M. Cecilia, and Dario C. Altieri. "Disabling Mitochondrial Reprogramming in Cancer." Pharmacological Research 102 (2015): 42-45. Web.</li>
+									<li>Caino, M. Cecilia, and Dario C. Altieri. "Cancer Cells Exploit Adaptive Mitochondrial Dynamics to Increase Tumor Cell Invasion." Cell Cycle14.20 (2015): 3242-247</li>
+									<li>M. Cecilia Caino, Jae Ho Seo, <u>Angeline Aguinaldo</u>, Eric Wait, Kelly G. Bryant, Andrew V. Kossenkov, James E. Hayden, Valentina Vaira, Annamaria Morotti, Stefano Ferrero, Silvano Bosari, Dmitry I. Gabrilovich, Lucia R. Languino, Andrew R. Cohen, Dario C. Altieri. A neuronal network of mitochondrial dynamics regulates metastasis. Nature Communications, 2016; 7: 13730</li>
+									</ol>
+
+
+									<ul class="actions small">
+										<li><a href="files/Mitochondria Cancer Cells - Slide Deck.pdf" class="button special">Slide Deck</a></li>
+										<li><a href="https://git-bioimage.coe.drexel.edu/angeline/MitochondriaAnalysisTool" class="button special">GitLab</a></li>
+										<li><a href="http://www.nature.com/articles/ncomms13730" class="button special">Publication</a></li>
+									</ul>
+
+
+								</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

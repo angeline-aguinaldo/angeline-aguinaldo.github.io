@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Forensic Fingerprint Matching using Computer Vision - Angeline Aguinaldo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+			<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="aboutme.html">About Me</a></li>
+										<li><a href="projects.html">Projects</a></li>
+										<li><a href="publications.html">Publications</a></li>
+										<li><a href="https://angelineaguinaldo.wordpress.com/">Blog</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+<!-- 								<section>
+									<header class="major">
+										<h2>Recent Updates</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section> -->
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Feel free to contact me if you have any questions or are looking to collaborate. I'm always checking my e-mail so I will be sure to get you a prompt reply. Looking forward to hearing from you!</p>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="mailto:angeline.m.aguinaldo@gmail.com">angeline.m.aguinaldo@gmail.com</a></li>
+										<li class="fa-phone">Upon request</li>
+										<li class="fa-home">Upon request</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Angeline Aguinaldo. All rights reserved.</p>
+								</footer>
+
+						</div>
+					</div>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong> &#10048; Hi, I'm Angeline!</strong></a>
+								</header>
+
+							<!-- Content -->
+								<section>
+
+									<ul class="actions vertical">
+										<li><a href="projects.html" class="button">Back to Projects</a></li>
+									</ul>
+								
+									<header class="main">
+										<h1>Forensic Fingerprint Matching using Computer Vision</h1>
+									</header>
+
+									<span class="image main"><img src="images/Fingerprint Matching/fingerprint with fiducials.png" alt="" /></span>
+
+									<p>Computer vision techniques can be implemented to further knowledge in a variety of subject areas and applications. One notable application is image forensics. Computer vision algorithms can be designed to identify matching artifacts between images. This can lead to identification and understanding of the source of a given activity, attack, or forgery. In this project, image transformation information is used to classify a sample fingerprint among a provided database of fingerprints.</p>
+
+									<h2>Problem Description</h2>
+									<p>The problem posed in this project requires the identification of a suspect that has broken in into research facility and stolen valuable semiconductors from the second floor labs. The only evidence that can be used in identifying the culprit are fingerprints obtained from the scene. These fingerprints have undergone a transform because they were extracted at different viewing angles. The objective of this project is to use computer vision and geometrical transformation concepts to match the fingerprint to a provided database of ten fingerprints from ten unique suspects with minimal error. This must be conducted using solely automated image analysis software. Based on the provided sample and database prints, a visual screening was conducted and the following results were anticipated.</p>
+
+									<h2>Method</h2>
+									<p>Several unique characteristics of the assumed transformation were exploited to classify sample fingerprints within a given database. The transformation that the sample fingerprints had undergone was assumed to be affine. During affine transformation, the following characteristics of the image are said to be preserved pre and post transformation: the ratio of triangular areas, ratio of moments, and parallel lines. These are called the affine invariants. The ‘ratio of triangular areas’ invariants are obtained by calculating area between adjacent convex hull points and obtaining the ratio of the subsequent area of adjacent convex hull points. The ‘ratio of moments’ invariants are obtained by calculating the ratio between the moment and the next higher order moment. The ‘parallel lines’ invariant state that all parallel lines remain parallel under affine transformation.</p>
+									<p>The affine invariant exploited in this algorithm was the ratio of triangular areas and parallel lines. Statistics of the convex hull of each fingerprint were also used to classify the prints. Two methods of classification were experimented. Method 1 classified by observing the minimum sum of squared errors between the sample fingerprint and a database fingerprint invariant ratio of areas. Method 2 attempted to classify the fingerprints by observing the error between the database image and the inverse transform image’s fiducial and convex hull points.</p>
+
+									<h2>Algorithm</h2>
+									<p>To classify the fingerprints, the algorithm executed four major stages:</p>
+									<ol>
+									<li>Pre-processing</li>
+									<li>Invariant Processing</li>
+									<li>Inverse Transformation</li>
+									<li>Comparison/Classification</li>
+									</ol>
+									<h3>Pre-Processing</h3>
+									<p>After reading a fingerprint image into MATLAB, the image was passed to, <b>DatabaseSkel</b>. Here, the image was converted to double for ease of computation. The image was then thresholded using the Otsu threshold function in MATLAB, <b>graythresh</b>. The image was then converted to binary under the conditions of the threshold. The image was inverted because the desired foreground pixels were initially coded as 0 and the background pixels as 1. A median filter was applied to the binary image and an iterative skeletonization operation was performed five times for optimal skeletonization. The binary, skeletonized fingerprint was then ready for invariant processing. The foreground pixel indices of the image were stored in a structure for future reference. This was repeated for all sample fingerprints and database fingerprints.</p>
+
+									<h3>Invariant Processing</h3>
+									<p>After pre-processing the image, the skeletonized image was passed to <b>GetConvexHull</b>. The convex hull that enclosed the foreground pixels was identified using, <b>bwconvhull</b>. The centroid of this convex hull as well as the convex hull vertices were identified and stored in a structure for future reference. The centroid and the convex hull vertices were passed to <b>GetTriangleAreas</b> where the triangular areas were calculated. The areas were obtained by passing two adjacent points and the convex hull centroid to <b>polyarea</b>. These areas were stored in a vector and sorted from least to greatest. This vector was stored in their respective structure. The sorted vector of triangle areas was passed to <b>InvariantAreaRatio</b> where the ratio of subsequent areas was obtained. Ratios that outputted NaN or 0 values were removed as it was assumed that the points interrogated were identical which equated the areas to 0. This was repeated for all sample fingerprints and database fingerprints.</p>
+
+									<h3>Inverse Transformation</h3>
+									<p>Following the invariant processing, the sample fingerprint structure and the database structure were passed to <b>InverseAffineTransform</b>. This extracted the centroid, the convex hull vertices, the foreground indices, and the image of the sample fingerprint and database fingerprint under investigation. The centroid, convex hull vertices, and image were passed to <b>FiducialPoints</b> where the fiducial points were identified. The three fiducial points chosen were the two branch points (obtained by <b>bwmorph</b>) located at the two minimum Euclidean distances from the centroid in addition to the centroid itself. The centroid was considered to be a fiducial point due to the parallel lines invariant. Because the centroid is representative of the center of mass, it is identified as a point equidistant from the pair of parallel sides.</p>
+									<p>These fiducial points, foreground pixels, and convex hulls vertices of the sample fingerprint and database fingerprint were then mapped to be of the following form (I' and I) in preparation for the affine transform estimation.</p>
+
+									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMeq01.png" alt="" /></span></center></p>
+
+									<p>The affine transform was estimated using the following relationship:</p>
+
+									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMeq02.png" alt="" /></span></center></p>
+
+									<p>The data points of the sample fingerprint were inversely transformed to be mapped to the plane of the database fingerprint using the following formula:</p>
+
+									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMeq03.png" alt="" /></span></center></p>
+
+									<p>The transformed image was stored in the respective structure for future reference. This stage was repeated for every combination of sample and database fingerprint.</p>
+
+									<h3>Comparison/Classification</h3>
+									<p>After the invariant transformation was conducted, the comparison and classification was conducted. Two methods were used independently for classification.</p>
+
+									<p>The first method exploited the ratio of areas invariant of affine transforms. The area of ratios vectors of the sample fingerprint and the database fingerprints were compared. Because the area of ratio vectors were often of unequal sizes, the smaller of the two vectors under investigation was padded for ease of concatenation. The padded vectors were then passed to <b>TotalInvariantError</b> to identify the smallest error between the ratio of area vectors (I and I'). The error between the areas was found using the following formula:</p>
+
+									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMeq04.png" alt="" /></span></center></p>
+
+									<p>The combination of sample and database fingerprint was said to be the matching prints.</p>
+
+									<p>The second method attempted to use the inverse affine transformation to compare corresponding features for classification. This passed the inverse transformed fiducial points, foreground pixel, and convex hull points. Here the Cartesian coordinates of each point was compared to its closest neighbor of its type. The sum of squared errors (SSE) between the estimated transform points of the sample fingerprint and its closest neighbor in the database fingerprint was calculated. The combination of sample and database fingerprint was said to be the matching prints.</p>
+
+									<p>To run this algorithm, run <b>FingerprintMatching_RunMe</b> and multi-select the database images and fingerprint images.</p>
+
+									<h2>Experimental Evaluation</h2>
+									<h3>Method 1</h3>
+									<p>These images matches are represented in the following figure set with the corresponding SSE:</p>
+
+									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMpic01.png" alt="" /></span></center></p>
+
+									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMpic02.png" alt="" /></span></center></p>
+
+									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMpic03.png" alt="" /></span></center></p>
+
+									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMpic04.png" alt="" /></span></center></p>
+
+									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMpic05.png" alt="" /></span></center></p>
+
+									<h3>Method 2</h3>
+									<p>This method was not able to successfully output image matches.</p>
+
+									<p>The following figure illustrates the attempted inverse affine transformation result.</p>
+
+									<p><center><span class="image fit"><img src="images/Fingerprint Matching/FPMpic06.png" alt="" /></span></center></p>
+
+									<p>The first and second panel demonstrate the sample and database fingerprint with the centroid marked as a green asterisk and fiducial points as the blue asterisks. The third panel illustrates the attempted inverse affine transformation of the database fingerprint onto the sample fingerprint plane.</p>
+
+									<h2>Discussion</h2>
+
+									<p>Based on these resultes, Method 1 does not produce the desired outcomes. This may be attributed to the convex hull vertex extraction and area ratio calculation. It was not well understood how varying convex hull vertex numbers should be handled when determining the ratio of areas and computing the sum of squared errors.</p>
+									<p>Additionally, it can be seen that Method 2 was not able to successfully output image classifications. It can be seen that the recovered image was not properly scaled to meet the proportions of the sample fingerprint plane. While the images do match, when compared, this will yield a high SSE because of the dramatically differing Cartesian coordinates. It is unclear as to why the affine transformation did not work as intended. This may be attributed to an error in fiducial point selection.</p>
+
+									<h2>Project Details</h2>
+									<p>This project was completed for a graduate-level course, Fundamentals of Computer Vision, at Drexel University.</p>
+									<ul>
+									<li><strong>Advisor:</strong> Dr. Ferdinand Cohen</li>
+									<li><strong>Last updated:</strong> March 17, 2016</li>
+									</ul>
+
+									<ul class="actions small">
+										<li><a href="https://github.com/angeline-aguinaldo/FingerprintMatchingCV" class="button special">Git</a></li>
+									</ul>
+
+								</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
