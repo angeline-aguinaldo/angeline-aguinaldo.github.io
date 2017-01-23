@@ -126,12 +126,12 @@
 									<h3>Segmentation</h3>
 									<p>To segment the mitochondria, a filtering algorithm was used to extract the foreground from the background of the original image found in <b>(a)</b> in the figure below. In the provided dataset, the mitochondria channel was located on channel 4. This channel was extracted and a contrast filter was applied<sup>[4]</sup>. The contrast filter consisted of an iterative Gaussian low pass filter on the image data for 25 iterations as shown in <b>(b)</b>.The contrast was adjusted as seen in <b>c</b><sup>[3]</sup>. Following this, an Otsu threshold was determined and used to segregate the RGB image and convert it to a binary image as seen in <b>(d)</b>. The small objects of pixel size less than 25 were removed, <b>(e)</b>, to reduce noise. The image was then skeletonized to minimize incorrect connectivity between objects that may have been caused by halos. This can be found in <b>(f)</b>.</p>
 
-									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic03.png" alt="" /></span></p></center>
+									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic03.PNG" alt="" /></span></p></center>
 									<center><h5>The segmentation algorithm used in the provided data set</h5></center>
 
 									<p>After the image was filtered, the boundaries on the binary image were located and locations of the boundary pixels were stored. Lines were then plotted on top of the figure at the boundary pixel locations. The colors of the plots were determined by the index of the filename found in the given file directory. The various mitochondria outlines can be found in the figure below.</p>
 
-									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic04.png" alt="" /></span></p></center>
+									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic04.PNG" alt="" /></span></p></center>
 									<center><h5>Segmented mitochondria. All images have a pixel resolution of 0.085&mu;m/pixel</h5></center>
 
 									<h3>Counting Necks</h3>
@@ -180,12 +180,12 @@ end
 									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic06.png" alt="" /></span></p></center>
 									<center><h5>Plot of average number of objects found at each time point for each level of oleic acid. The circle markers indicate a new frame. The number of mitochondria decreases over time for all levels of oleic acid.</h5></center>
 
-									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic07.png" alt="" /></span></p></center>
+									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic07.PNG" alt="" /></span></p></center>
 
 									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic08.png" alt="" /></span></p></center>
 									<center><h5>Plot of average number of objects found at each time point for each level of oleic acid. The circle markers indicate a new frame. The number of mitochondria decreases over time for all levels of oleic acid.</h5></center>
 
-									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic09.png" alt="" /></span></p></center>
+									<center><p><span class="image"><img src="images/Mitochondria Fission Fusion/pic09.PNG" alt="" /></span></p></center>
 
 									<h2>Conclusions and Discussion</h2>
 									<p>In addition to the number of necks, the number of objects in each frame was collected. Based on the neck and object relationship, it can be inferred that fusion is occurring. It can be said that the rate of fusion decreases as the oleic acid level increases.</p>

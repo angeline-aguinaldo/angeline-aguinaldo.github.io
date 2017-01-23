@@ -131,15 +131,15 @@
 									<p>Following the invariant processing, the sample fingerprint structure and the database structure were passed to <b>InverseAffineTransform</b>. This extracted the centroid, the convex hull vertices, the foreground indices, and the image of the sample fingerprint and database fingerprint under investigation. The centroid, convex hull vertices, and image were passed to <b>FiducialPoints</b> where the fiducial points were identified. The three fiducial points chosen were the two branch points (obtained by <b>bwmorph</b>) located at the two minimum Euclidean distances from the centroid in addition to the centroid itself. The centroid was considered to be a fiducial point due to the parallel lines invariant. Because the centroid is representative of the center of mass, it is identified as a point equidistant from the pair of parallel sides.</p>
 									<p>These fiducial points, foreground pixels, and convex hulls vertices of the sample fingerprint and database fingerprint were then mapped to be of the following form (I' and I) in preparation for the affine transform estimation.</p>
 
-									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMeq01.png" alt="" /></span></center></p>
+									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMeq01.PNG" alt="" /></span></center></p>
 
 									<p>The affine transform was estimated using the following relationship:</p>
 
-									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMeq02.png" alt="" /></span></center></p>
+									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMeq02.PNG" alt="" /></span></center></p>
 
 									<p>The data points of the sample fingerprint were inversely transformed to be mapped to the plane of the database fingerprint using the following formula:</p>
-
-									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMeq03.png" alt="" /></span></center></p>
+s
+									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMeq03.PNG" alt="" /></span></center></p>
 
 									<p>The transformed image was stored in the respective structure for future reference. This stage was repeated for every combination of sample and database fingerprint.</p>
 
@@ -148,7 +148,7 @@
 
 									<p>The first method exploited the ratio of areas invariant of affine transforms. The area of ratios vectors of the sample fingerprint and the database fingerprints were compared. Because the area of ratio vectors were often of unequal sizes, the smaller of the two vectors under investigation was padded for ease of concatenation. The padded vectors were then passed to <b>TotalInvariantError</b> to identify the smallest error between the ratio of area vectors (I and I'). The error between the areas was found using the following formula:</p>
 
-									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMeq04.png" alt="" /></span></center></p>
+									<p><center><span class="image"><img src="images/Fingerprint Matching/FPMeq04.PNG" alt="" /></span></center></p>
 
 									<p>The combination of sample and database fingerprint was said to be the matching prints.</p>
 

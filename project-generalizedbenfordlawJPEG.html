@@ -114,7 +114,7 @@
 									<h2>Benford's Law</h2>
 									<p>Benford’s law is an empirical law about the frequency distribution of the first digit of many sets of naturally generated numbers. The Probability Mass Function of the random variable X (first digit of a number) follows a decreasing logarithmic law:</p>
 
-									<p><center><span class="image"><img src="images/Generalized Benford's Law/BenfordEq01.png" alt=""/></center></span></p>
+									<p><center><span class="image"><img src="images/Generalized Benford's Law/BenfordEq01.PNG" alt=""/></center></span></p>
 
 									<p>A representation of the histogram distribution of Benford’s law can be seen below.</p>
 
@@ -131,21 +131,21 @@
 
 									<p>The quality of the fitting of the actual distribution to Benford’s law can be measured with the χ2 divergence:</p>
 
-									<p><center><span class="image"><img src="images/Generalized Benford's Law/BenfordEq02.png" alt="" /></span></center></p>
+									<p><center><span class="image"><img src="images/Generalized Benford's Law/BenfordEq02.PNG" alt="" /></span></center></p>
 
 									<p>where p_i is the probability value predicted by Benford’s law, and  p ̂_i is the experimental results from the first digit histogram. The average of χ2 divergence for the fitting of all the UCID images is 0.0034, which indicates good fitting results.</p>
 
 									<h2>Generalized Benford's law in JPEG Coefficients</h2>
 									<p>The PMF of the first digit of the JPEG quantized block-DCT coefficients (hereafter, the JPEG coefficients) is observed to not follow the Benford’s law. However, it can be seen through visual inspection that the JPEG coefficients still follow a logarithmic distribution. This prompted Fu et al. to describe the distribution of JPEG coefficients using a parametric version of Benford’s law. Therefore, the PMF of the first digit follows the generalized Benford’s law, a parametric logarithmic function presented in this paper.</p>
 
-									<p><center><span class="image"><img src="images/Generalized Benford's Law/BenfordEq03.png" alt="" /></span></center></p>
+									<p><center><span class="image"><img src="images/Generalized Benford's Law/BenfordEq03.PNG" alt="" /></span></center></p>
 
 									<p>In the generalized Benford’s law equation, s and q are model parameters that depend on the JPEG quality factor and other characteristics of the image and N is a normalization factor to make the total probability equal to one. It is noteworthy to mention that the natural expression of Benford’s law can be seen when s = 0 and q = 1 are substituted into the generalized Benford’s law. This indicates that Benford’s law is a special case of the generalized Benford’s law.</p>
 									<p>The parameters N, q, and s are dependent on the following conditions:</p>
 
 									<ul>
 									<li>The dataset of images: we choose the images result of JPEG compressing the UCID images.</li>
-									<li>2.	The Q-factors of the JPEG compression: In our case, 100, 90, 80, 70, 60 and 50.</li>
+									<li>The Q-factors of the JPEG compression: In our case, 100, 90, 80, 70, 60 and 50.</li>
 									</ul>
 
 									<p>Fu et. al. estimated the parameters N, s, and q for Q-factors as shown in the table below. They do not describe their methodology but we believe it is through some optimization technique that we did not have time to investigate or reproduce. Throughout our verfication we use their parameters at the respective Q-factors.</p>
@@ -231,7 +231,7 @@
 
 									<ul>
 									<li>If it has not been JPEG compressed, the distribution of the first digit of the JPEG coefficients of the image will follow the Generalized Benford’s law.</li>
-									<li>•	If it has already been JPEG compressed, the distribution of the first digit of the JPEG coefficients will deviate from the Generalized Benford’s law.</li>
+									<li>If it has already been JPEG compressed, the distribution of the first digit of the JPEG coefficients will deviate from the Generalized Benford’s law.</li>
 									</ul>
 
 									<p>The test image dataset utilized was the open source uncompressed image database (UCID). The images were compressed using MATLAB function imwrite with the following quality factors: 99, 95, 90, 80, 70, and 60. The images were then uncompressed and stored in bitmap format. Using a standard quantization table, the images were JPEG compressed with quality factor of 100. The grid origin of DCT transformation was assumed to be 8x8.</p>
@@ -241,7 +241,7 @@
 									<ul>
 									<li>Visual inspection of the histogram of the first digits of the JPEG coefficients</li>
 									<li>Machine-learning algorithm (e.g. support vector machine)</li>
-									<li>c.	Goodness-of-fitting with respect to the Generalized Benford’s law model</li>
+									<li>Goodness-of-fitting with respect to the Generalized Benford’s law model</li>
 									</ul>
 
 									<p>Fu et al use a Support Vector Machine algorithm where a logarithmic function of the first digits of the JPEG coefficients is used a features. Time did not permit us to reproduce their work with an SVM. However, we reproduced their work to demonstrate that the JPEG coefficients of a previously single-compressed image does not follow a logarithmic function and used sum of squared errors (SSE) for the goodness-of-fitting test to classifier an image as uncompressed or compressed. Some visual plots from our validation are shown below. The charts compare the first digit distribution of JPEG coefficients for an uncompressed image to that of a previously compressed image at the noted Q-factors. The JPEG compression artifacts can clearly be visually detected.</p>
